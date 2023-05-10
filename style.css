@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+*{
+  margin: 0;padding: 0;
+}
+
+:root{
+  --primarycolor:rgb(42, 0, 63);
+  --secondarycolor:rgb(198, 145, 210);
+}
+
+body {
+ display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+
+
+
+.menu{
+  background: var(--primarycolor);
+  width: 100vw;
+  font-weight: 600;
+  color: white;
+  font-size: 20px;
+  font-family: "raleway", sans-serif;
+}
+
+.menu ol{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+
+.menu ol li:hover::before{
+ content: '';
+ position: absolute;
+ top: 75px;
+ width: 115px;
+ height: 2px;
+ background:white;
+}
+
+.active::before{
+  content: '';
+  position: absolute;
+  top: 75px;
+  width: 115px;
+  height: 2px;
+  background:white;
+}
+
+.card{
+  display: flex;
+  padding: 10px 10px;
+}
+
+.contact-details{
+  margin: 0px 10px;
+  width: 90%;
+}
+
+.name{
+  font-size: 18px;
+}
+
+/* my contacts section */
+
+.contacts{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3%;
+}
+
+
+.contacts div,.contact_info img{
+  margin-top: 20px;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid var(--primarycolor);
+  height:150px;
+  width:150px;
+  overflow: hidden;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+
+.contacts div:hover::after{
+  content: '';
+  position: absolute;
+  left: 0px;
+  background: rgba(126, 7, 162, 0.412);
+  height:150px;
+  width:150px;
+}
+
+/* people from my contact */
+
+.contact_info{
+  visibility: hidden;
+  background: rgb(198, 145, 210);
+  color: var(--primarycolor);
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  transition:all  1s ;
+  transform: scale(0.1);
+  -webkit-transform: scale(0.1);
+  -moz-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  -o-transform: scale(0.1);
+  -webkit-transition:all  1s ;
+  -moz-transition:all  1s ;
+  -ms-transition:all  1s ;
+  -o-transition:all  1s ;
+}
+
+.contact_info h6{
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+}
+
+.contact_info i{
+  font-size: 40px;
+  cursor: pointer;
+}
+
+
+
+/* contact save */
+
+ .contact_form{
+  visibility: hidden;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap:5%;
+  color: var(--primarycolor);
+  background: var(--secondarycolor);
+  transition:all  1s ;
+  transform: scale(0.1);
+  -webkit-transform: scale(0.1);
+  -moz-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  -o-transform: scale(0.1);
+  -webkit-transition:all  1s ;
+  -moz-transition:all  1s ;
+  -ms-transition:all  1s ;
+  -o-transition:all  1s ;
+} 
+
+
+#close_form{
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;top: 20px;
+  right: 20px;
+}
+
+.contact_form h2,.contact_info h4{
+  font-family: 'Raleway', sans-serif;
+  font-size: 26px;
+}
+
+#input-btn{
+  background: var(--primarycolor);
+  color: white;
+}
+
+.contact_form i{
+  font-size: 80px;
+}
+
+
+input {
+  font-family: 'inter', sans-serif;
+  width: 60%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--primarycolor);
+}
+
+.contact_form div{
+  font-family: 'inter', sans-serif;
+  display: flex;
+  gap: 20px;
+
+}
+
+#save-btn {
+  font-family: 'Raleway', sans-serif;
+  background: var(--primarycolor);
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+/* haburger */
+
+#hambergur{
+  visibility:hidden;
+}
+
+.ham_look{
+  visibility: hidden;
+  width:100vw;
+  background: var(--primarycolor);
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+  gap:10%;
+  padding: 10px;
+}
+
+
+#close_ham {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+#ham_icon {
+  margin-top: 30px;
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+}
+
+
+#hambergur_content {
+  width: 280px;
+  height: 300px;
+  position: absolute;
+  top: 0;left: 0;
+  z-index: 999;
+  background: var(--primarycolor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ham_menu>h1, .ham_look div h1{
+  font-size: 25px;
+  color: white;
+  font-family: "raleway", sans-serif;
+  padding-left: 10px;
+}
+
+.ham_menu li{
+  list-style: none;
+  color: white;
+  font-size: 20px;
+  font-family: "raleway", sans-serif;
+  padding-left: 20px;
+}
+
+
+@media  all and (max-width:845px) {
+  
+.ham_look{
+  visibility: visible;
+}
+
+.menu{
+  display: none;
+}
+
+.contact_info{
+  top: 200px;
+}
+
+
+}
+
+
+

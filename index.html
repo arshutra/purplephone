@@ -1,0 +1,88 @@
+
+<html>
+    <title>Purple Phone</title>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="purple phn.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/d940d584d4.js" crossorigin="anonymous"></script>
+    <body>
+        <div class="menu">
+            <nav>
+                <ol>
+                    <h1>MY CONTACT APP</h1>
+                    <li class="active">My Contacts</li>
+                    <li id="open_form">New Contact</li>
+                    <li>Charts and Maps</li>
+                </ol>
+            </nav>
+        </div>
+        <div id="hambergur">
+            <div id="hambergur_content">
+                <div class="ham_menu">
+                    <i class="fa-regular fa-circle-xmark" id="close_ham" onclick="close_ham()" ></i>
+                    <h1>MY CONTACT APP</h1>
+                    <li class="active">My Contacts</li>
+                    <li id="open_form">New Contact</li>
+                    <li>Charts and Maps</li>
+                </div>
+            </div>
+        </div>
+        <div class="ham_look">
+            <div><h1>My contact app</h1></div>
+            <div><i class="fa-solid fa-bars" style="color: #ffffff;" id="ham_icon" onclick="open_ham()"></i></div>
+        </div>
+        <div class="contacts">
+            <div onclick="viwe()"><img src="team-1.png" alt="" width="150px"></div>
+            <div onclick="viwe()"><img src="team-2.png" alt="" width="150px"></div>
+            <div onclick="viwe()"><img src="team-3.png" alt="" width="150px"></div>
+            <div onclick="viwe()"><img src="team-4.png" alt="" width="150px"></div>
+            <div onclick="viwe()"><img src="team-5.png" alt="" width="150px"></div>
+            <div onclick="viwe()"><img src="team-1.png" alt="" width="150px"></div>
+            <div onclick="viwe()"><img src="team-2.png" alt="" width="150px"></div>
+            <div onclick="viwe()"><img src="team-3.png" alt="" width="150px"></div>
+            <div onclick="viwe()"><img src="team-4.png" alt="" width="150px"></div>
+            <div onclick="viwe()"><img src="team-5.png" alt="" width="150px"></div>
+            <div onclick="viwe()"><img src="team-1.png" alt="" width="150px"></div>
+            <div onclick="viwe()"><img src="team-2.png" alt="" width="150px"></div>
+            <div onclick="viwe()"><img src="team-3.png" alt="" width="150px"></div>
+            <div onclick="viwe()"><img src="team-4.png" alt="" width="150px"></div>
+            <div onclick="viwe()"><img src="team-5.png" alt="" width="150px"></div>
+            <div onclick="viwe()"><img src="team-1.png" alt="" width="150px"></div>
+            <div onclick="viwe()"><img src="team-2.png" alt="" width="150px"></div>
+            <div onclick="viwe()"><img src="team-3.png" alt="" width="150px"></div>
+            <div onclick="viwe()"><img src="team-4.png" alt="" width="150px"></div>
+            <div onclick="viwe()"><img src="team-5.png" alt="" width="150px"></div>
+        </div>
+
+
+        <!-- contact info -->
+
+        <div class="contact_info" id="info">
+            <i class="fa-regular fa-circle-xmark" id="close_info"></i>
+            <h4>People From My Contacts</h4>
+            <img src="team-2.png" alt="">
+            <h6>Henny Ford</h6>
+            <h6>123-456-7890</h6>
+            <i class="fa-solid fa-square-phone"></i>
+        </div>
+
+
+        <!-- contact form -->
+
+        <div class="contact_form" id="form">
+            <i class="fa-regular fa-circle-xmark" id="close_form"></i>
+            <h2>New Contact</h2>
+            <i class="fa-solid fa-circle-user"></i>
+            <input type="text" name="name" placeholder="Enter Name" id="name" required>
+            <input type="tel" id="number" placeholder="Enter Number" required>
+            <div>
+                <label for="active">Active</label><input type="radio" name="radio" id="active" required>
+                <label for="inactive">Inactive</label><input type="radio" name="radio" id="inactive" required>
+            </div>
+            <input type="submit" id="input-btn"  value="Save Contact" onclick="addInfo()">
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
